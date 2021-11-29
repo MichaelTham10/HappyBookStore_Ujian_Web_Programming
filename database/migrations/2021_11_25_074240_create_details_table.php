@@ -20,7 +20,8 @@ class CreateDetailsTable extends Migration
             $table->string('publisher');
             $table->integer('year');
             $table->longText('description');
-            $table->timestamps();
+           
+            $table->foreign('book_id')->references('id')->on('books');
         });
     }
 
